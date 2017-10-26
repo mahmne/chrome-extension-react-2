@@ -1,0 +1,26 @@
+{
+  "manifest_version": 2,
+
+  "name": "Glossary",
+  "description": "Extension to print selected text",
+  "version": "1.0",
+  "icons": {
+    "128": "logo_small.png",
+    "48": "logo_small.png",
+    "16": "logo_small.png"
+  },
+  "background": {
+    "scripts": ["eventPage.js"],
+    "persistent": false
+  },
+
+  "permissions": [
+    "contextMenus"
+  ],
+
+  "browser_action": {
+    "default_title": "Click on Glassory",
+    "default_icon": "logo_small.png",
+    "default_popup": "./../index.html"
+  }
+}
