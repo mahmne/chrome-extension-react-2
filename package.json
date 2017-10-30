@@ -6,7 +6,8 @@
   "repository": "",
   "scripts": {
     "start": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js",
-    "test:watch": "npm run test -- --watch"
+    "dev:build": "webpack",
+    "dev:start": "nodemon --exec babel-node ./src/server/"
   },
   "author": "",
   "license": "ISC",

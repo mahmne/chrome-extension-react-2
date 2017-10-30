@@ -1,12 +1,13 @@
+const path = require('path');
+
 module.exports = {
+  output: {
+    path: path.resolve(__dirname, 'extension/'),
+    filename: 'bundle.js'
+  },
   entry: [
     './src/index.js'
   ],
-  output: {
-    path: __dirname,
-    publicPath: '/',
-    filename: 'bundle.js'
-  },
   module: {
     loaders: [{
       exclude: /node_modules/,
