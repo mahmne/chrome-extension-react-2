@@ -1,13 +1,18 @@
-var menuItem = {
-  'id': 'Print',
-  'title': 'Print',
-  'contexts': ['selection']
-};
+// var menuItem = {
+//   'id': 'Print',
+//   'title': 'Print',
+//   'contexts': ['selection']
+// };
+// chrome.contextMenus.create(menuItem);
+// chrome.contextMenus.onClicked.addListener(function (clickData) {
+//   if (clickData.menuItemId == 'Print' && clickData.selectionText) {
+//     alert(clickData.selectionText);
+//   }
+// });
 
-chrome.contextMenus.create(menuItem);
+function click (tab) {
+  chrome.tabs.executeScript(null,
+    {file: 'content.js'});
+}
 
-chrome.contextMenus.onClicked.addListener(function (clickData) {
-  if (clickData.menuItemId == 'Print' && clickData.selectionText) {
-    alert(clickData.selectionText);
-  }
-});
+chrome.browserAction.onClicked.addListener(click);

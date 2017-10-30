@@ -15,12 +15,15 @@
   },
 
   "permissions": [
-    "contextMenus"
+    "contextMenus",
+    "tabs",
+    "http://*/*",
+    "https://*/*"
   ],
 
   "browser_action": {
     "default_title": "Click on Glassory",
-    "default_icon": "logo_small.png",
-    "default_popup": "./../index.html"
+    "default_icon": "logo_small.png"
+
   }
 }
